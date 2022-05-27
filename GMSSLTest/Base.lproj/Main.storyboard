@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SfP-jn-AVg">
+                                <rect key="frame" x="108.5" y="193" width="197" height="30"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="点击加密">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickToEncrypt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Il-mn-8Qs"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入加密内容" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MsO-6N-rgB">
+                                <rect key="frame" x="10" y="94" width="394" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="加密后的hex" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vNT-J0-OZw">
+                                <rect key="frame" x="158.5" y="273" width="97" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="opn-V5-ezu">
+                                <rect key="frame" x="108.5" y="343.5" width="197" height="30"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="点击解密">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickToDecrypt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3DY-4K-xDy"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="解密数据" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oHH-8p-jbF">
+                                <rect key="frame" x="172.5" y="423.5" width="69.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="解密结果" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsy-Ih-ho1">
+                                <rect key="frame" x="172.5" y="464" width="69.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="SfP-jn-AVg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4aY-BV-Uqh"/>
+                            <constraint firstItem="oHH-8p-jbF" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ARi-c8-2Uq"/>
+                            <constraint firstItem="SfP-jn-AVg" firstAttribute="top" secondItem="MsO-6N-rgB" secondAttribute="bottom" constant="65" id="BAg-xC-78z"/>
+                            <constraint firstItem="vNT-J0-OZw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="HEP-JO-AJK"/>
+                            <constraint firstItem="opn-V5-ezu" firstAttribute="top" secondItem="vNT-J0-OZw" secondAttribute="bottom" constant="50" id="HHN-K2-5Ao"/>
+                            <constraint firstItem="opn-V5-ezu" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Iul-zZ-lLY"/>
+                            <constraint firstItem="oHH-8p-jbF" firstAttribute="top" secondItem="opn-V5-ezu" secondAttribute="bottom" constant="50" id="KIK-vq-XZp"/>
+                            <constraint firstItem="oHH-8p-jbF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="KtU-Gz-SxI"/>
+                            <constraint firstItem="MsO-6N-rgB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="O1R-F3-X3j"/>
+                            <constraint firstItem="tsy-Ih-ho1" firstAttribute="top" secondItem="oHH-8p-jbF" secondAttribute="bottom" constant="20" id="S6f-rK-2ev"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="oHH-8p-jbF" secondAttribute="trailing" constant="10" id="S7z-F1-bRQ"/>
+                            <constraint firstItem="SfP-jn-AVg" firstAttribute="width" secondItem="MsO-6N-rgB" secondAttribute="width" multiplier="0.5" id="TWx-gs-nTo"/>
+                            <constraint firstItem="opn-V5-ezu" firstAttribute="width" secondItem="SfP-jn-AVg" secondAttribute="width" id="Uw9-V3-GsF"/>
+                            <constraint firstItem="tsy-Ih-ho1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ddg-MR-ils"/>
+                            <constraint firstItem="MsO-6N-rgB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="f98-Ji-Kvx"/>
+                            <constraint firstItem="vNT-J0-OZw" firstAttribute="top" secondItem="SfP-jn-AVg" secondAttribute="bottom" constant="50" id="fB8-i3-fmO"/>
+                            <constraint firstItem="MsO-6N-rgB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="t4N-Ju-fAh"/>
+                            <constraint firstItem="vNT-J0-OZw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="vCi-2d-CXS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MsO-6N-rgB" secondAttribute="trailing" constant="10" id="xGg-5o-Aog"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vNT-J0-OZw" secondAttribute="trailing" constant="10" id="xuy-ob-nMB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="decryptLabel" destination="oHH-8p-jbF" id="6fz-rq-emt"/>
+                        <outlet property="decryptResultLabel" destination="tsy-Ih-ho1" id="NC0-fH-2BZ"/>
+                        <outlet property="encryptHexLabel" destination="vNT-J0-OZw" id="7uk-gg-A2R"/>
+                        <outlet property="encryptTextField" destination="MsO-6N-rgB" id="qBI-oy-bjr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="99.776785714285708"/>
+        </scene>
+    </scenes>
+</document>
